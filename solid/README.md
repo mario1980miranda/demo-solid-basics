@@ -8,7 +8,7 @@
 | Interface Segregation Principle | No client should be forced to depend on methods that it does not use. |
 | Dependency Inversion Principle | High-level modules should not depend on low-level modules, both should depend on abstractions. |
 
-# Single responsibility Principle
+## Single responsibility Principle
 
 Every class in Java should have a single job to do. To be precise, there should only be one reason to change a class. Here’s an example of a Java class that **does not follow** the single responsibility principle (SRP):
 
@@ -22,7 +22,7 @@ public class Vehicle {
 
 The Vehicle class has three separate responsibilities: reporting, calculation, and database. By applying SRP, we can separate the above class into three classes with separate responsibilities.
 
-# Open-closed principle
+## Open-closed principle
 
 Software entities (e.g., classes, modules, functions) should be open for an extension, but closed for modification.
 
@@ -59,7 +59,7 @@ public class Truck extends Vehicle{
 
 Adding another Vehicle type is as simple as making another subclass and extending from the Vehicle class.
 
-# Liskov substitution principle
+## Liskov substitution principle
 
 The Liskov Substitution Principle (LSP) applies to inheritance hierarchies such that derived classes must be completely substitutable for their base classes.
 
@@ -89,7 +89,8 @@ The above classes do not obey LSP because you cannot replace the Rectangle base 
 
 The Square class has extra constraints, i.e., the height and width must be the same. Therefore, substituting Rectangle with Square class may result in unexpected behavior.
 
-# Interface segregation principle
+## Interface segregation principle
+
 The Interface Segregation Principle (ISP) states that clients should not be forced to depend upon interface members they do not use. In other words, do not force any client to implement an interface that is irrelevant to them.
 
 Suppose there’s an interface for vehicle and a Bike class:
@@ -115,7 +116,8 @@ public class Bike implements Vehicle {
 
 As you can see, it does not make sense for a Bike class to implement the openDoors() method as a bike does not have any doors! To fix this, ISP proposes that the interfaces be broken down into multiple, small cohesive interfaces so that no class is forced to implement any interface, and therefore methods, that it does not need.
 
-# Dependency inversion principle
+## Dependency inversion principle
+
 The Dependency Inversion Principle (DIP) states that we should depend on abstractions
 (interfaces and abstract classes) instead of concrete implementations (classes). 
 
